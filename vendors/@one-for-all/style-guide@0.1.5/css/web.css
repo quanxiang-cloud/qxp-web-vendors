@@ -1,0 +1,271 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Blocks */
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+footer,
+header,
+aside,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+/* List */
+
+ul {
+  list-style: none;
+}
+
+/* Box sizing */
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+/* Media */
+
+img,
+embed,
+object,
+audio,
+video {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+/* Iframe */
+
+iframe {
+  border: 0;
+}
+
+/* Table */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* classes */
+
+/* semantic background color classes */
+
+.bg-light {
+  background-color: var(--color-light);
+}
+
+.bg-app {
+  background-color: var(--color-bg-app);
+}
+
+.bg-error {
+  background-color: var(--color-error-lighter);
+}
+
+.bg-success {
+  background-color: var(--color-success-lighter);
+}
+
+.bg-warning {
+  background-color: var(--color-warning-lighter);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary-lighter);
+}
+
+.bg-highlight {
+  background-color: var(--color-highlight-lighter);
+}
+
+/* text color classes */
+
+.color-light {
+  color: var(--color-light);
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+.color-highlight {
+  color: var(--color-highlight);
+}
+
+.color-placeholder {
+  color: var(--color-placeholder);
+}
+
+.color-error {
+  color: var(--color-error);
+}
+
+.color-success {
+  color: var(--color-success);
+}
+
+.color-warning {
+  color: var(--color-warning);
+}
+
+/* typography style classes */
+
+.typography-headline1 {
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  font-size: var(--font-size-headline1);
+  line-height: calc(32 / 24);
+  line-height: var(--line-height-headline1);
+}
+
+.typography-headline2 {
+  font-weight: var(--font-weight-medium);
+  font-size: 20px;
+  font-size: var(--font-size-headline2);
+  line-height: calc(28 / 20);
+  line-height: var(--line-height-headline2);
+}
+
+.typography-headline3 {
+  font-weight: var(--font-weight-medium);
+  font-size: 16px;
+  font-size: var(--font-size-headline3);
+  line-height: calc(24 / 16);
+  line-height: var(--line-height-headline3);
+}
+
+.typography-headline4 {
+  font-weight: var(--font-weight-medium);
+  font-size: 14px;
+  font-size: var(--font-size-headline4);
+  line-height: calc(22 / 14);
+  line-height: var(--line-height-headline4);
+}
+
+.typography-body1 {
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
+  font-size: var(--font-size-body1);
+  line-height: calc(24 / 16);
+  line-height: var(--line-height-body1);
+}
+
+.typography-body2 {
+  font-weight: var(--font-weight-regular);
+  font-size: 14px;
+  font-size: var(--font-size-body2);
+  line-height: calc(22 / 14);
+  line-height: var(--line-height-body2);
+}
+
+.typography-button {
+  font-weight: var(--font-weight-regular);
+  font-size: 14px;
+  font-size: var(--font-size-button);
+  line-height: calc(22 / 14);
+  line-height: var(--line-height-button);
+}
+
+.typography-underline {
+  font-weight: var(--font-weight-regular);
+  font-size: 12px;
+  font-size: var(--font-size-underline);
+  line-height: calc(20 / 12);
+  line-height: var(--line-height-underline);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.typography-caption {
+  font-weight: var(--font-weight-regular);
+  font-size: 12px;
+  font-size: var(--font-size-caption);
+  line-height: calc(20 / 12);
+  line-height: var(--line-height-caption);
+}
+
+/* override variables with web only styles */
+
+:root {
+  /* font size values */
+  --font-size-headline1: 24px;
+  --font-size-headline2: 20px;
+  --font-size-headline3: 16px;
+  --font-size-headline4: 14px;
+  --font-size-body1: 16px;
+  --font-size-body2: 14px;
+  --font-size-button: 14px;
+  --font-size-underline: 12px;
+  --font-size-caption: 12px;
+
+  /* line height values */
+  --line-height-headline1: calc(32 / 24);
+  --line-height-headline2: calc(28 / 20);
+  --line-height-headline3: calc(24 / 16);
+  --line-height-headline4: calc(22 / 14);
+  --line-height-body1: calc(24 / 16);
+  --line-height-body2: calc(22 / 14);
+  --line-height-button: calc(22 / 14);
+  --line-height-underline: calc(20 / 12);
+  --line-height-caption: calc(20 / 12);
+}

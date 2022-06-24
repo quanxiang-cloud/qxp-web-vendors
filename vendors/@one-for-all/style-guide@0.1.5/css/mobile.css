@@ -1,0 +1,277 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Blocks */
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+footer,
+header,
+aside,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+/* List */
+
+ul {
+  list-style: none;
+}
+
+/* Box sizing */
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+/* Media */
+
+img,
+embed,
+object,
+audio,
+video {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+/* Iframe */
+
+iframe {
+  border: 0;
+}
+
+/* Table */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* classes */
+
+/* semantic background color classes */
+
+.bg-light {
+  background-color: var(--color-light);
+}
+
+.bg-app {
+  background-color: var(--color-bg-app);
+}
+
+.bg-error {
+  background-color: var(--color-error-lighter);
+}
+
+.bg-success {
+  background-color: var(--color-success-lighter);
+}
+
+.bg-warning {
+  background-color: var(--color-warning-lighter);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary-lighter);
+}
+
+.bg-highlight {
+  background-color: var(--color-highlight-lighter);
+}
+
+/* text color classes */
+
+.color-light {
+  color: var(--color-light);
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+.color-highlight {
+  color: var(--color-highlight);
+}
+
+.color-placeholder {
+  color: var(--color-placeholder);
+}
+
+.color-error {
+  color: var(--color-error);
+}
+
+.color-success {
+  color: var(--color-success);
+}
+
+.color-warning {
+  color: var(--color-warning);
+}
+
+/* typography style classes */
+
+.typography-headline1 {
+  font-weight: var(--font-weight-medium);
+  font-size: .22rem;
+  font-size: var(--font-size-headline1);
+  line-height: calc(33 / 22);
+  line-height: var(--line-height-headline1);
+}
+
+.typography-headline2 {
+  font-weight: var(--font-weight-medium);
+  font-size: .19rem;
+  font-size: var(--font-size-headline2);
+  line-height: calc(29 / 19);
+  line-height: var(--line-height-headline2);
+}
+
+.typography-headline3 {
+  font-weight: var(--font-weight-medium);
+  font-size: .17rem;
+  font-size: var(--font-size-headline3);
+  line-height: calc(26 / 17);
+  line-height: var(--line-height-headline3);
+}
+
+.typography-headline4 {
+  font-weight: var(--font-weight-medium);
+  font-size: .15rem;
+  font-size: var(--font-size-headline4);
+  line-height: calc(23 / 15);
+  line-height: var(--line-height-headline4);
+}
+
+.typography-body1 {
+  font-weight: var(--font-weight-regular);
+  font-size: .17rem;
+  font-size: var(--font-size-body1);
+  line-height: calc(26 / 17);
+  line-height: var(--line-height-body1);
+}
+
+.typography-body2 {
+  font-weight: var(--font-weight-regular);
+  font-size: .15rem;
+  font-size: var(--font-size-body2);
+  line-height: calc(23 / 15);
+  line-height: var(--line-height-body2);
+}
+
+.typography-button {
+  font-weight: var(--font-weight-regular);
+  font-size: .15rem;
+  font-size: var(--font-size-button);
+  line-height: calc(23 / 15);
+  line-height: var(--line-height-button);
+}
+
+.typography-underline {
+  font-weight: var(--font-weight-regular);
+  font-size: .13rem;
+  font-size: var(--font-size-underline);
+  line-height: calc(20 / 13);
+  line-height: var(--line-height-underline);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.typography-caption {
+  font-weight: var(--font-weight-regular);
+  font-size: .13rem;
+  font-size: var(--font-size-caption);
+  line-height: calc(20 / 13);
+  line-height: var(--line-height-caption);
+}
+
+/* override variables with mobile only styles */
+
+:root {
+  /*font size values*/
+  --font-size-headline1: .22rem;
+  --font-size-headline2: .19rem;
+  --font-size-headline3: .17rem;
+  --font-size-headline4: .15rem;
+  --font-size-body1: .17rem;
+  --font-size-body2: .15rem;
+  --font-size-button: .15rem;
+  --font-size-underline: .13rem;
+  --font-size-caption: .13rem;
+
+  /*line height values*/
+  --line-height-headline1: calc(33 / 22);
+  --line-height-headline2: calc(29 / 19);
+  --line-height-headline3: calc(26 / 17);
+  --line-height-headline4: calc(23 / 15);
+  --line-height-body1: calc(26 / 17);
+  --line-height-body2: calc(23 / 15);
+  --line-height-button: calc(23 / 15);
+  --line-height-underline: calc(20 / 13);
+  --line-height-caption: calc(20 / 13);
+}
+
+html {
+  /* define root font size, 1rem = 100px in 1x design */
+  font-size: calc(10000vw / 375);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

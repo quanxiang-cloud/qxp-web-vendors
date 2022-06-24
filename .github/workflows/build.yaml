@@ -1,0 +1,22 @@
+name: Build for testing environment
+env:
+  IMAGE_REPO: qxcr.xyz/lowcode
+  DATE: $(date "+%Y%m%d")
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  build-qxp-web-vendors:
+    needs: [bundle-clients]
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo IMAGE_TAG="v${{ env.DATE }}-${GITHUB_SHA::7}" >> $GITHUB_ENV
+      - run: docker build -t "$IMAGE_REPO/qxp-web-vendors:$IMAGE_TAG" -f ./deploy/Dockerfile-vendors .
+      - run: docker push "$IMAGE_REPO/qxp-web-vendors:$IMAGE_TAG"
+      - run: docker rmi "$IMAGE_REPO/qxp-web-vendors:$IMAGE_TAG"
+      - uses: ./.github/actions/fail-alert
+        if: ${{ failure() }}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
